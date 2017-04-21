@@ -1,0 +1,111 @@
+{
+  "name": "mona-lisa",
+  "version": "0.1.0",
+  "description": "JavaScript FP micro-toolkit",
+  "scripts": {
+    "start": "cross-env NODE_ENV=development webpack --watch --config __env__/dev/webpack.config.dev.js",
+    "build": "cross-env NODE_ENV=production webpack --config __env__/prod/webpack.config.prod.js",
+    "analyzer": "cross-env NODE_ENV=production webpack --config __env__/analyzer/webpack.config.analyzer.js",
+    "test": "cross-env NODE_ENV=test npm run jest",
+    "testw": "cross-env NODE_ENV=test npm run jest -- --watch",
+    "coverage": "cross-env NODE_ENV=test npm run jest -- --coverage",
+    "typecheck": "cross-env NODE_ENV=test npm run flow",
+    "up": "npm run ncu -- -a && npm update && npm run yarn upgrade",
+    "ncu": "npm-check-updates",
+    "yarn": "yarn",
+    "flow": "flow",
+    "jest": "jest",
+    "cross-env": "cross-env"
+  },
+  "author": "Meillet Robin <robin.meillet@epitech.eu>",
+  "contributors": [],
+  "main": "dist/bundle.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kMeillet/mona-lisa.git"
+  },
+  "bugs": {
+    "url": "https://github.com/kMeillet/mona-lisa/issues"
+  },
+  "homepage": "https://github.com/kMeillet/mona-lisa/#readme",
+  "jest": {
+    "testRegex": "/__tests__/.*.js$",
+    "moduleFileExtensions": [
+      "js"
+    ]
+  },
+  "devDependencies": {
+    "babel-core": "^6.24.1",
+    "babel-eslint": "^7.2.2",
+    "babel-jest": "^19.0.0",
+    "babel-loader": "^6.4.1",
+    "babel-plugin-transform-flow-strip-types": "^6.22.0",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-regenerator": "^6.24.1",
+    "babel-plugin-transform-runtime": "^6.23.0",
+    "babel-plugin-ramda": "^1.2.0",
+    "babel-preset-env": "^1.4.0",
+    "clean-webpack-plugin": "^0.1.16",
+    "cross-env": "^4.0.0",
+    "flow-bin": "^0.44.0",
+    "jest": "^19.0.2",
+    "npm-check-updates": "^2.10.5",
+    "progress-bar-webpack-plugin": "^1.9.3",
+    "webpack": "^2.4.1",
+    "webpack-bundle-analyzer": "^2.4.0",
+    "xo": "^0.18.1",
+    "xo-loader": "^0.7.0"
+  },
+  "dependencies": {
+    "babel-runtime": "^6.23.0",
+    "daggy": "0.0.1",
+    "ramda": "^0.23.0"
+  },
+  "engines": {
+    "node": ">= 6",
+    "npm": ">= 3"
+  },
+  "xo": {
+    "parser": "babel-eslint",
+    "space": 2,
+    "semicolon": true,
+    "esnext": true,
+    "envs": [
+      "node",
+      "browser"
+    ],
+    "globals": [
+      "__ENV__",
+      "it",
+      "expect",
+      "afterEach",
+      "beforeEach",
+      "describe"
+    ],
+    "rules": {
+      "arrow-parens": 0,
+      "new-cap": 0,
+      "object-curly-spacing": 0,
+      "no-restricted-globals": 0,
+      "import/no-unresolved": 0,
+      "import/prefer-default-export": 0,
+      "import/no-unassigned-import": 0,
+      "capitalized-comments": 0,
+      "space-before-function-paren": 0,
+      "no-eq-null": 0,
+      "eqeqeq": 0,
+      "no-unused-vars": 0,
+      "no-negated-condition": 0,
+      "comma-dangle": [
+        "error",
+        {
+          "arrays": "always-multiline",
+          "objects": "always-multiline",
+          "imports": "always-multiline",
+          "exports": "always-multiline",
+          "functions": "always-multiline"
+        }
+      ]
+    }
+  }
+}
