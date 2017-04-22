@@ -1,12 +1,6 @@
 # mona-lisa
 
-JavaScript FP micro-toolkit.
-
-# Why ?
-
-FP JavaScript package are splitted into tons of contributors with different implementation.
-
-This project is just a suite of a simple small toolkit, who can be use in conjuction with your favorite FP tools (like Ramda).
+JavaScript FP micro-toolkit (3kb gzip).
 
 # Usage
 
@@ -15,7 +9,7 @@ npm i mona-lisa ramda --save
 ```
 
 ```js
-const λ = require('./dist/bundle');
+const λ = require('mona-lisa');
 const R = require('ramda');
 
 const eqZero = R.equals(0);
@@ -30,11 +24,28 @@ console.log(fact(5) === 120);
 
 # Monads
 
-- Box (simple container).
-- Coyoneda (compose across functor).
-- Either (error handling with Left/Right).
-- Monoid (with Sum, Product, Any, All, Max, Min, Pair, Fn).
-- Custom (with daggy).
+- IO
+- Future
+- Options
+- State
+- Reader
+- Writer
+- Tuple
+- Tuple2
+- Tuple3
+- Tuple4
+- Tuple5
+- Either
+- Validation
+- Yoneda
+- Coyoneda
+- Free
+- Cofree
+- Trampoline
+- Unit
+- Custom
+
+Custom is Fantasy Land daggy alias to create new type.
 
 # Combinators
 
@@ -64,3 +75,9 @@ fix-point¹   | **Y** | `fix`       |                    |                      
 [Haskell]: https://www.haskell.org/
 [Ramda]: http://ramdajs.com/
 [Sanctuary]: http://sanctuary.js.org/#combinator
+
+# Credits :
+
+[Avaq]: https://github.com/Avaq
+[DrBoolean]: https://github.com/DrBoolean
+[FantasyLand]: https://github.com/fantasyland

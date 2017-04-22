@@ -1,6 +1,6 @@
 {
   "name": "mona-lisa",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "JavaScript FP micro-toolkit",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack --watch --config __env__/dev/webpack.config.dev.js",
@@ -9,11 +9,9 @@
     "test": "cross-env NODE_ENV=test npm run jest",
     "testw": "cross-env NODE_ENV=test npm run jest -- --watch",
     "coverage": "cross-env NODE_ENV=test npm run jest -- --coverage",
-    "typecheck": "cross-env NODE_ENV=test npm run flow",
     "up": "npm run ncu -- -a && npm update && npm run yarn upgrade",
     "ncu": "npm-check-updates",
     "yarn": "yarn",
-    "flow": "flow",
     "jest": "jest",
     "cross-env": "cross-env"
   },
@@ -39,27 +37,32 @@
     "babel-eslint": "^7.2.2",
     "babel-jest": "^19.0.0",
     "babel-loader": "^6.4.1",
-    "babel-plugin-transform-flow-strip-types": "^6.22.0",
     "babel-plugin-transform-object-rest-spread": "^6.23.0",
-    "babel-plugin-transform-regenerator": "^6.24.1",
-    "babel-plugin-transform-runtime": "^6.23.0",
-    "babel-plugin-ramda": "^1.2.0",
     "babel-preset-env": "^1.4.0",
     "clean-webpack-plugin": "^0.1.16",
     "cross-env": "^4.0.0",
-    "flow-bin": "^0.44.0",
     "jest": "^19.0.2",
     "npm-check-updates": "^2.10.5",
     "progress-bar-webpack-plugin": "^1.9.3",
     "webpack": "^2.4.1",
     "webpack-bundle-analyzer": "^2.4.0",
+    "webpack-node-externals": "^1.5.4",
     "xo": "^0.18.1",
     "xo-loader": "^0.7.0"
   },
   "dependencies": {
-    "babel-runtime": "^6.23.0",
     "daggy": "0.0.1",
-    "ramda": "^0.23.0"
+    "fantasy-cofrees": "0.0.2",
+    "fantasy-eithers": "0.0.2",
+    "fantasy-frees": "^0.1.0",
+    "fantasy-io": "0.0.1",
+    "fantasy-options": "0.0.1",
+    "fantasy-readers": "0.0.1",
+    "fantasy-states": "^0.2.1",
+    "fantasy-tuples": "^1.0.0",
+    "fantasy-validations": "0.0.2",
+    "fantasy-writers": "0.0.1",
+    "fluture": "^5.0.0"
   },
   "engines": {
     "node": ">= 6",
@@ -92,10 +95,7 @@
       "import/no-unassigned-import": 0,
       "capitalized-comments": 0,
       "space-before-function-paren": 0,
-      "no-eq-null": 0,
-      "eqeqeq": 0,
       "no-unused-vars": 0,
-      "no-negated-condition": 0,
       "comma-dangle": [
         "error",
         {

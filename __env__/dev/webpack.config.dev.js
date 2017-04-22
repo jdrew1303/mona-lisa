@@ -1,5 +1,6 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
+const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: {
@@ -10,6 +11,7 @@ module.exports = {
     path: resolve(__dirname, '../../dist'),
     libraryTarget: 'umd',
   },
+  externals: [nodeExternals()],
   context: resolve(__dirname, '../../src'),
   devtool: 'inline-source-map',
   module: {
