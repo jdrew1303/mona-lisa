@@ -30,11 +30,6 @@ console.log(fact(5) === 120);
 - State
 - Reader
 - Writer
-- Tuple
-- Tuple2
-- Tuple3
-- Tuple4
-- Tuple5
 - Either
 - Validation
 - Yoneda
@@ -78,6 +73,6 @@ fix-point¹   | **Y** | `fix`       |                    |                      
 
 # Credits :
 
-[Avaq]: https://github.com/Avaq
-[DrBoolean]: https://github.com/DrBoolean
-[FantasyLand]: https://github.com/fantasyland
+- Avaq : https://github.com/Avaq
+- DrBoolean : https://github.com/DrBoolean
+- FantasyLand : https://github.com/fantasyland

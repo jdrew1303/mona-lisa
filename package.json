@@ -1,6 +1,6 @@
 {
   "name": "mona-lisa",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "JavaScript FP micro-toolkit",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack --watch --config __env__/dev/webpack.config.dev.js",

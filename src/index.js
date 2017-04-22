@@ -9,7 +9,6 @@ import Writer from 'fantasy-writers';
 import Options from 'fantasy-options';
 import Future from 'fluture';
 import Custom from 'daggy';
-import { Tuple, Tuple2, Tuple3, Tuple4, Tuple5 } from 'fantasy-tuples';
 
 import Combinators from './combinators';
 
@@ -26,11 +25,6 @@ module.exports = {
   Options,
   Future,
   Custom,
-  Tuple,
-  Tuple2,
-  Tuple3,
-  Tuple4,
-  Tuple5,
   ...Free,
   ...Combinators,
 };
