@@ -1,6 +1,6 @@
 # mona-lisa
 
-JavaScript FP micro-toolkit (3kb gzip).
+JavaScript FP micro-toolkit.
 
 # Usage
 
