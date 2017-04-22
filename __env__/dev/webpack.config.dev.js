@@ -1,6 +1,5 @@
 const { resolve } = require('path');
 const webpack = require('webpack');
-const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: {
@@ -12,7 +11,6 @@ module.exports = {
     libraryTarget: 'umd',
   },
   externals: [nodeExternals()],
-  context: resolve(__dirname, '../../src'),
   devtool: 'inline-source-map',
   module: {
     rules: [
@@ -24,7 +22,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        include: [resolve(__dirname, '../../src')],
+        include: [resolve(__dirname, '../../src'), /node_modules/],
         use: 'babel-loader',
       },
     ],

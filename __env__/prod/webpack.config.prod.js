@@ -2,7 +2,6 @@ const { resolve } = require('path');
 const webpack = require('webpack');
 const CleanWebpackPlugin = require('clean-webpack-plugin');
 const ProgressBarPlugin = require('progress-bar-webpack-plugin');
-const nodeExternals = require('webpack-node-externals');
 
 module.exports = {
   entry: {
@@ -13,7 +12,6 @@ module.exports = {
     path: resolve(__dirname, '../../dist'),
     libraryTarget: 'umd',
   },
-  externals: [nodeExternals()],
   devtool: false,
   module: {
     rules: [
@@ -25,7 +23,7 @@ module.exports = {
       },
       {
         test: /\.js$/,
-        include: [resolve(__dirname, '../../src')],
+        include: [resolve(__dirname, '../../src'), /node_modules/],
         use: 'babel-loader',
       },
     ],
