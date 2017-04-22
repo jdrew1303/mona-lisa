@@ -10,13 +10,13 @@ npm i mona-lisa ramda --save
 
 ```js
 const λ = require('mona-lisa');
-const { equals } = require('ramda');
+const { equals, ifElse } = require('ramda');
 
 const eqZero = equals(0);
 const justOne = λ.K(1);
 const mult = x => y => x * y;
 const dec = x => x - 1;
-const fact = λ.Y(f => R.ifElse(eqZero, justOne, λ.S(mult)(λ.B(f)(dec))));
+const fact = λ.Y(f => ifElse(eqZero, justOne, λ.S(mult)(λ.B(f)(dec))));
 
 console.log(fact(5) === 120);
 ```
