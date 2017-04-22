@@ -25,7 +25,7 @@ console.log(fact(5) === 120);
 
 - IO
 - Future
-- Options
+- Option
 - State
 - Reader
 - Writer

@@ -6,7 +6,7 @@ import Reader from 'fantasy-readers';
 import State from 'fantasy-states';
 import Validation from 'fantasy-validations';
 import Writer from 'fantasy-writers';
-import Options from 'fantasy-options';
+import Option from 'fantasy-options';
 import Future from 'fluture';
 import Custom from 'daggy';
 import { Tuple, Tuple2, Tuple3, Tuple4, Tuple5 } from 'fantasy-tuples';
@@ -23,7 +23,7 @@ module.exports = {
   State,
   Validation,
   Writer,
-  Options,
+  Option,
   Future,
   Custom,
   Tuple,
