@@ -36,7 +36,7 @@ module.exports = {
       NODE_ENV: JSON.stringify('development'),
       __ENV__: JSON.stringify('development'),
     }),
-    // Disable debug mode.
+    // Enable debug mode.
     new webpack.LoaderOptionsPlugin({
       debug: true,
       minimize: false,
